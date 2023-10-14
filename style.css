@@ -1,0 +1,228 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark gray header background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    animation: headerFade 1s ease-in-out; /* Header fade-in animation */
+}
+
+header h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+/* Navigation (Hamburger menu) styles */
+.nav {
+    background-color: #444; /* Slightly lighter gray */
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden to the left */
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+    transition: left 0.3s; /* Add animation transition */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for the navigation */
+}
+
+.nav.opened {
+    left: 0; /* Slide in when opened */
+}
+
+.nav ul {
+    padding: 20px;
+}
+
+.nav li {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: navItemFade 0.5s ease-in-out; /* Navigation item fade-in animation */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    transition: transform 0.2s;
+    padding: 10px 0;
+    border-bottom: 1px solid #555; /* Separator between navigation items */
+}
+
+.nav a:last-child {
+    border-bottom: none; /* Remove separator from the last item */
+}
+
+.nav a:hover {
+    transform: scale(1.05); /* Slight scale up on hover */
+    background-color: #555; /* Darker background on hover */
+}
+
+.nav-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+    animation: navBtnFade 1s ease-in-out; /* Nav button fade-in animation */
+    background-color: #333; /* Dark gray button background */
+    padding: 10px;
+    border-radius: 50%; /* Circular button */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for the button */
+}
+
+.nav-btn .bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Main content styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: contentFade 1s ease-in-out; /* Content fade-in animation */
+}
+
+.material {
+    margin-bottom: 30px;
+}
+
+/* Button styles */
+.btn {
+    background-color: var(--blue-button-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 5px;
+  }
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+}
+
+/* Welcome section styles */
+.welcome {
+    text-align: center;
+    padding: 20px;
+    animation: welcomeFade 1s ease-in-out; /* Welcome section fade-in animation */
+}
+
+.thoughts {
+    font-style: italic;
+    color: #555;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.welcome img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Additional content sections */
+.additional-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    animation: additionalContentFade 1s ease-in-out; /* Additional content fade-in animation */
+}
+
+/* Style for headings in additional content */
+.additional-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+:root {
+    --blue-button-color: #007bff;
+  }
+/* Style for paragraphs in additional content */
+.additional-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #333; /* Dark gray footer background */
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Animations */
+@keyframes headerFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes navItemFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes navBtnFade {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes contentFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes welcomeFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes additionalContentFade {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE & UPSC Study Material - Mario Theme</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GATE & UPSC Study Material</h1>
+        <div class="nav-btn" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    
+    <!-- Navigation (Hamburger menu) -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">GATE Preparation</a></li>
+            <li><a href="#">UPSC Preparation</a></li>
+            <li><a href="#">About Us</a></li> <!-- Add About option -->
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="welcome">
+            <img src="images (1).jpeg" alt="Mario" width="300" height="200">
+            <p class="thoughts">Here are some inspiring thoughts to start your adventure: "It's-a me, Mario!"</p>
+            <button class="btn" onclick="showContent()">Let's-a go!</button>
+        </div>
+        
+        <section class="material">
+            <h2>GATE Exam Preparation</h2>
+            <p>This section provides study material and articles related to GATE (Graduate Aptitude Test in Engineering) exam preparation.</p>
+            <a class="btn" href="gateSYLLABUS.html">GATE Syllabus</a>
+            <a class="btn" href="gate previous.html">GATE Previous Year Papers</a>
+            <a class="btn" href="GATE TIPS.HTML">Tips for GATE Success</a>
+            <a class="btn" href="gateexams.html">GATE Exam Dates</a>
+            <a class="btn" href="gatestudymatrial.html">GATE Study Materials</a>
+            <a class="btn" href="gatepattern.html">GATE Exam Pattern</a>
+            <a class="btn" href="gateexmainationrevison.html">GATE Revison Schedule</a>
+        </section>
+        <br>
+        <br>
+<p><h1> only gate section working upsc section work in progress</h1> </p><br><br>
+        <section class="material">
+            <h2>UPSC Exam Preparation</h2>
+            <p>This section provides study material and articles related to UPSC (Union Public Service Commission) exam preparation.</p>
+            <a class="btn" href="exam pattern.html">UPSC Exam Pattern</a>
+            <a class="btn" href="#">UPSC Study Plan</a>
+            <a class="btn" href="Topper Tips for upsc.html">Topper's Tips for UPSC</a>
+            <a class="btn" href="prelims.html">UPSC Prelims Syllabus</a>
+            <a class="btn" href="mains.html">UPSC Mains Syllabus</a>
+            <a class="btn" href="interview.html">UPSC Interview Preparation</a>
+            <a class="btn" href="examdates.html">UPSC Exam Dates</a>
+            <a class="btn" href="UPSC queestion paper.html">UPSC Question Papers</a>
+            <a class="btn" href="optional subjects.html">UPSC Optional Subjects</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 GATE & UPSC Study Material</p>
+    </footer>
+
+    <script>
+        function showContent() {
+            // Show the content and hide the welcome section
+            document.querySelector(".content").style.opacity = "1";
+            document.querySelector(".welcome").style.opacity = "0";
+        }
+
+        function toggleNav() {
+            // Toggle the visibility of the navigation (Hamburger menu)
+            const nav = document.querySelector(".nav");
+            const navBtn = document.querySelector(".nav-btn");
+            nav.classList.toggle("opened"); // Toggle the "opened" class
+            // Rotate the hamburger icon
+            navBtn.classList.toggle("open");
+        }
+        window.addEventListener("load", function () {
+    const wrapper = document.querySelector(".wrapper");
+    const footer = document.querySelector("footer");
+
+    function stickFooter() {
+        const windowHeight = window.innerHeight;
+        const wrapperHeight = wrapper.offsetHeight;
+        const footerHeight = footer.offsetHeight;
+
+        if (wrapperHeight < windowHeight) {
+            const spaceToFill = windowHeight - wrapperHeight - footerHeight;
+            wrapper.style.minHeight = windowHeight + "px";
+            footer.style.marginTop = spaceToFill + "px";
+        } else {
+            wrapper.style.minHeight = "auto";
+            footer.style.marginTop = "0";
+        }
+    }
+
+    stickFooter();
+    window.addEventListener("resize", stickFooter);
+});
+    </script>
+</body>
+</html>
